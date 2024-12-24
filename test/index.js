@@ -10,7 +10,7 @@ describe('Tests', () => {
       '<table id="table1" data-excel-name="A table">' +
         '<thead>' +
           '<tr>' +
-            '<th>1</th>' +
+            '<th>001</th>' +
             '<th>2</th>' +
             '<th>3</th>' +
           '</tr>' +
@@ -100,7 +100,7 @@ describe('Tests', () => {
 
     // A1
     expect(worksheet.A1).to.have.property('t', 'n');
-    expect(worksheet.A1).to.have.property('v', '1');
+    expect(worksheet.A1).to.have.property('v', '001');
 
     // B1
     expect(worksheet.B1).to.have.property('t', 'n');

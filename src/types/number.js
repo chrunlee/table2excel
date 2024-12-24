@@ -8,7 +8,9 @@
  * fulfill the criteria of a number cell.
  */
 export default (cell, text) => {
-  if (text.length > 0 && !isNaN(text)) return { t: 'n', v: text };
+  //对于存在前导0的数字，做字符串返回
+  if(text.length > 0 && !isNaN(text) && text.startsWith('0')) return {t: 's',v : text}
+  if (text.length > 0 && !isNaN(text) ) return { t: 'n', v: text };
 
   return null;
 };

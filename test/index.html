@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="exportExcel">导出Table</button>
+    <table id="table">
+        <thead>
+            <th>1</th>
+            <th>2</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>002</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+<script src="../dist/table2excel.js"></script>
+<script>
+    document.getElementById('exportExcel').onclick = function(){
+        console.log('abc');
+        new Table2Excel().export(document.getElementById('table'),'test.xlsx');
+    }
+</script>
